@@ -400,18 +400,17 @@ header {
     align-items: flex-end;
     z-index: 100;
 }
-/* A seção à direita no banner é posicionada de forma relativa, ocupa 100vh de altura, tem largura máxima de 450px, layout em coluna e alinhamento à direita. */
 
 .banner .right .description {
     padding: 30px 60px 0 0;
     color: #ffffff;
 }
-/* A descrição à direita tem padding no topo e na direita e cor branca. */
+
 
 .banner .right .description li {
     list-style: none;
 }
-/* Remove o estilo de lista dos itens de descrição à direita. */
+
 
 .banner .right .description h4 {
     display: inline-block;
@@ -422,13 +421,13 @@ header {
     display: flex;
     align-items: center;
 }
-/* O título 'h4' da descrição à direita tem tamanho de fonte 1.3em, maiúsculas, peso 400, espaçamento entre letras de 1px, e é exibido como bloco inline. */
+
 
 .banner .right .description p {
     margin: 5px 0 25px 30px;
     font-weight: 300;
 }
-/* Os parágrafos na descrição têm margem superior de 5px e margem inferior de 25px, com peso de fonte leve (300). */
+
 
 .banner .right h2 {
     color: #ffffff;
@@ -444,6 +443,84 @@ header {
     max-width: 450px;
     max-height: 250px;
 }
+
+/* MODAIS */
+
+  #details-button {
+    display: none !;
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 999;
+  }
+  
+  .details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .details-modal-inner-container {
+    width: 80%;
+    max-width: 500px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    z-index: 999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .details-modal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .details-modal li {
+    margin-bottom: 1rem;
+  }
+  
+  .details-modal h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .details-modal span {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.25rem;
+  }
+
+  .details-modal .trailer {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .details-modal .trailer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+
+  .hidden {
+    display: none;
+  }
+
 
 @media screen and (max-width: 768px) {
     
@@ -485,6 +562,8 @@ header {
         display: flex;
     }
 
+
+
     .swiper .swiper-button-prev {
         left: 2%;
     }
@@ -495,22 +574,43 @@ header {
 
     .banner h1 {
         font-size: 4rem;
+        position: absolute;
+        top: 20%;
+        left: 10%;
     }
 
     .banner .left .features {
-        max-width: 300px;
+        position: absolute;
+        bottom: 0;
+        left: 50%; 
+        transform: translateX(-50%); 
+        margin: 0 auto; 
+        min-width: 300px;
+    }
+
+    .banner .left .features .rating {
+        flex-direction: row;
+        margin: 0 1rem;
     }
 
     .banner .left .features .rating .score {
         font-size: 1.5rem;
     }
 
+
     .banner .left .features .content h4 {
         font-size: 1.2em;
     }
 
+    .banner .left .features .content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 0;
+    }
     .banner .right .description {
-        padding: 30px 30px 0 0;
+        display: none;
     }
 
     .banner .right h2 {
@@ -520,5 +620,11 @@ header {
     .trailer {
         display: none;
     }
+
+    
+    #details-button {
+    display: block;
+    }
+
 }
     
