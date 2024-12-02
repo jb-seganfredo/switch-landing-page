@@ -61,14 +61,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
+    padding: 10px 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 20;
 }
 
 .logo img {
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 50px;
+    max-height: 50px;
     filter: invert(1);
     transition: transform 0.5s ease;
 }
@@ -291,7 +291,7 @@ header {
     width: 60px;
     height: 60px;
     z-index: 100;
-    background-color: rgb(120, 120, 232);
+    background-color: rgb(255, 55, 55);
     color: white;
     border-radius: 1rem;
     
@@ -351,7 +351,7 @@ header {
     padding: 1rem;
     border-radius: 1rem;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--primary);
     background: #ffffff;
 }
@@ -377,15 +377,15 @@ header {
 
 .banner .left .features .content h4 {
     color: #ffffff;
-    font-size: 1.5em;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 /* O título 'h4' dentro do conteúdo tem cor branca, tamanho de fonte 1.5em, peso de fonte 400, espaçamento entre letras de 2px e é exibido em maiúsculas. */
 
 .banner .left .features .content span {
-    font-size: 0.7em;
+    font-size: 1em;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -393,6 +393,8 @@ header {
 
 .banner .left .features .content .subtitle {
     color: var(--primary);
+    font-weight: 600;
+    font-size: 1rem;
 }
 /* O subtítulo dentro do conteúdo de recursos tem a cor definida pela variável --primary (vermelha). */
 
@@ -440,8 +442,8 @@ header {
 }
 
 .banner .right iframe {
-    max-width: 450px;
-    max-height: 250px;
+    max-width: 440px;
+    max-height: 238px;
 }
 
 /* MODAIS */
@@ -530,7 +532,7 @@ header {
   }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
     
     header {
         padding: 1rem;
@@ -542,8 +544,8 @@ header {
     }
 
     .logo img {
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 45px;
+        max-height: 45px;
     }
 
     .nav {
@@ -571,47 +573,40 @@ header {
     }
 
     .swiper .swiper-wrapper .swiper-slide .banner img {
-        width: 80%; 
+        width: 70%; 
     }
 
-    .banner h1 {
+    .banner .left h1 {
         font-size: 2rem;
     }
 
-    .banner .pokemon {
-        max-width: 15rem;
-        bottom: 7%
-    }
-
     .banner .left .features {
+        flex-direction: row;
+        padding-top: 0.2rem;
         position: absolute;
-        bottom: 3%;
         left: 50%; 
+        bottom: 0;
         transform: translateX(-50%); 
         margin: 0 auto; 
-        min-width: 300px;
-    }
-
-    .banner .left .features .rating {
-        margin: 0 1rem;
-        flex-direction: row;
+        min-width: 100%;
+        background-color: #ffffff4d;
+        z-index: 999;
     }
 
     .banner .left .features .rating .score {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
-
     .banner .left .features .content h4 {
-        font-size: 1.2em;
+        font-size: 1rem;
     }
 
     .banner .left .features .content {
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 5px;
         margin-left: 0;
+        padding: 0.4rem 1rem;
     }
 
     .banner .right .description {
