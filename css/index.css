@@ -244,11 +244,10 @@ header {
 
 .swiper .swiper-wrapper .swiper-slide .banner img {
     position: absolute;
-    width: 100%;
+    width: 46%;
     height: 100%;
     object-fit: contain;
     transform: translateX(-50%);
-    z-index: 1;
     left: 50%;
 }
 
@@ -262,18 +261,21 @@ header {
     height: 60px;
     z-index: 100;
     background-color: rgb(120, 120, 232);
+    color: white;
     border-radius: 1rem;
+
 }
 /* O botão anterior do swiper está posicionado com largura e altura de 60px, no centro vertical e com fundo vermelho. */
 
 .swiper .swiper-button-next {
     position: absolute;
+    right: 5%;
+    top: 50%;
     width: 60px;
     height: 60px;
-    top: 50%;
-    left: 90%;
     z-index: 100;
-    background-color: rgb(199, 36, 36);
+    background-color: rgb(120, 120, 232);
+    color: white;
     border-radius: 1rem;
     
 }
@@ -281,15 +283,9 @@ header {
 
 .swiper .swiper-button-next::after,
 .swiper .swiper-button-prev::after {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    width: 60px;
-    height: 60px;
-    line-height: 0;
-    background: transparent;
-    border-radius: 50%;
+    z-index: 100 !important;
+    display: block !important;
+    visibility: visible !important;
 }
 /* Os ícones dentro dos botões anterior e próximo estão centralizados, com cor semitransparente, largura e altura de 60px, e bordas arredondadas. */
 
@@ -349,6 +345,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
 }
 /* O conteúdo de recursos tem uma margem à esquerda de 20px e é exibido em uma coluna flexível. */
 
@@ -470,7 +467,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 1000;
   }
   
   .details-modal-inner-container {
@@ -487,6 +484,7 @@ header {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    z-index: 999;
   }
   
   .details-modal li {
@@ -564,14 +562,6 @@ header {
 
 
 
-    .swiper .swiper-button-prev {
-        left: 2%;
-    }
-
-    .swiper .swiper-button-next {
-        left: 88%;
-    }
-
     .banner h1 {
         font-size: 4rem;
         position: absolute;
@@ -609,6 +599,7 @@ header {
         gap: 5px;
         margin-left: 0;
     }
+
     .banner .right .description {
         display: none;
     }
@@ -620,7 +611,6 @@ header {
     .trailer {
         display: none;
     }
-
     
     #details-button {
     display: block;
