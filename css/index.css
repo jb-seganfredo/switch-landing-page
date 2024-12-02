@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: var(--text-font);
 }
-/* Remove a margem e o preenchimento padrão de todos os elementos e define o modelo de box-sizing como border-box. */
 
 :root {
     --primary: #ff0000;
@@ -17,7 +16,6 @@
     --text-font: 'Poppins', sans-serif;
 
 }
-/* Define a cor vermelha como uma variável CSS chamada --primary. */
 
 body {
     position: relative;
@@ -27,7 +25,6 @@ body {
     min-height: 100vh;
     overflow: hidden;
 }
-/* Define o corpo da página com posição relativa, cor de fundo preta, usa a fonte 'Roboto', ocupa 100% da largura e tem altura mínima de 100vh, com overflow oculto. */
 
 h1 {
     font-family: var(--gaming-font);
@@ -43,7 +40,7 @@ h1 {
 }
 
 h2 {
-    color: #ffffff;
+    color: var(--white-color);
     font-size: 3rem;
     line-height: 1em;
     font-weight: 400;
@@ -89,7 +86,7 @@ header {
 }
 
 .nav li a {
-    color: #fff;
+    color: var(--white-color);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 300;
@@ -121,7 +118,7 @@ header {
 }
 
 .login-input {
-    color: #ffffff;
+    color: var(--white-color);
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
     width: 10rem;
@@ -153,7 +150,7 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    color: #ffffff;
+    color: var(--white-color);
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
     outline: none;
@@ -162,7 +159,7 @@ header {
 }
 
 .search input::placeholder {
-    color: #ffffff;
+    color: var(--white-color);
     text-transform: uppercase;
     transform: translateX(5px);
     font-weight: 300;
@@ -197,7 +194,7 @@ header {
 }
   
 .mobile-menu ul li a {
-    color: #fff;
+    color: var(--white-color);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 300;
@@ -235,7 +232,6 @@ header {
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
 }
-/* Adiciona uma camada semitransparente preta sobre cada slide. */
 
 .swiper .swiper-wrapper .swiper-slide img {
     display: block;
@@ -244,7 +240,6 @@ header {
     object-fit: cover;
     object-position: center;
 }
-/* As imagens dentro dos slides são ajustadas para cobrir toda a área e são centralizadas. */
 
 .swiper .swiper-wrapper .swiper-slide .banner {
     position: absolute;
@@ -257,7 +252,6 @@ header {
     align-items: center;
     justify-content: space-around;
 }
-/* O banner dentro dos slides ocupa 100% da largura, tem altura mínima de 100vh, usa layout flexível para centralizar seu conteúdo horizontal e verticalmente. */
 
 .swiper .swiper-wrapper .swiper-slide .banner img {
     position: absolute;
@@ -268,7 +262,6 @@ header {
     left: 50%;
 }
 
-/* As imagens dentro do banner são centralizadas horizontalmente e têm largura máxima de 700px. */
 
 .swiper .swiper-button-prev {
     position: absolute;
@@ -276,13 +269,12 @@ header {
     top: 50%;
     width: 60px;
     height: 60px;
-    z-index: 100;
+    z-index: 10;
     background-color: rgb(120, 120, 232);
     color: white;
     border-radius: 1rem;
 
 }
-/* O botão anterior do swiper está posicionado com largura e altura de 60px, no centro vertical e com fundo vermelho. */
 
 .swiper .swiper-button-next {
     position: absolute;
@@ -290,26 +282,23 @@ header {
     top: 50%;
     width: 60px;
     height: 60px;
-    z-index: 100;
+    z-index: 10;
     background-color: rgb(255, 55, 55);
     color: white;
     border-radius: 1rem;
     
 }
-/* O botão próximo do swiper está posicionado com largura e altura de 60px, no centro vertical e com fundo azul. */
 
 .swiper .swiper-button-next::after,
 .swiper .swiper-button-prev::after {
-    z-index: 100 !important;
+    z-index: 10 !important;
     display: block !important;
     visibility: visible !important;
 }
-/* Os ícones dentro dos botões anterior e próximo estão centralizados, com cor semitransparente, largura e altura de 60px, e bordas arredondadas. */
 
 .right {
     max-height: 70vh;
 }
-/* Define a altura máxima de 70% da viewport para os elementos com a classe 'right'. */
 
 .banner img {
     max-width: 790px;
@@ -317,14 +306,12 @@ header {
     width: 50%;
     height: 50%;
 }
-/* As imagens no banner têm largura e altura máximas de 790px e ocupam 50% do contêiner. */
 
 .swiper .swiper-wrapper .swiper-slide .banner .left {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-/* O conteúdo à esquerda do banner é exibido em uma coluna flexível, espaçado uniformemente. */
 
 .banner .left .features {
     display: flex;
@@ -335,17 +322,15 @@ header {
     margin-top: 10rem;
     bottom: 0;
 }
-/* A seção de recursos à esquerda tem largura máxima de 400px e uma margem inferior de 100px. */
 
 .banner .left .features .rating {
-    color: #ffffff;
+    color: var(--white-color);
     display: flex;
     flex-direction: column;
     justify-content: flex-center;
     align-items: center;
     margin-bottom: 25px;
 }
-/* A seção de avaliação à esquerda tem texto branco, usa layout flexível para alinhar horizontalmente o conteúdo e tem uma margem inferior de 25px. */
 
 .banner .left .features .rating .score {
     padding: 1rem;
@@ -353,9 +338,8 @@ header {
     font-size: 2rem;
     font-weight: 500;
     color: var(--primary);
-    background: #ffffff;
+    background: var(--white-color);
 }
-/* A nota de avaliação (score) tem padding de 15px, fonte grande (2rem), cor vermelha e fundo branco. */
 
 .banner .left .features .content {
     padding: 1rem;
@@ -365,24 +349,21 @@ header {
     align-items: center;
     z-index: 999;
 }
-/* O conteúdo de recursos tem uma margem à esquerda de 20px e é exibido em uma coluna flexível. */
 
 .banner .left .features .pricing {
-    color: #ffffff;
+    color: var(--white-color);
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-/* A seção de preços é exibida com texto branco e layout flexível para alinhamento horizontal. */
 
 .banner .left .features .content h4 {
-    color: #ffffff;
+    color: var(--white-color);
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-/* O título 'h4' dentro do conteúdo tem cor branca, tamanho de fonte 1.5em, peso de fonte 400, espaçamento entre letras de 2px e é exibido em maiúsculas. */
 
 .banner .left .features .content span {
     font-size: 1em;
@@ -448,10 +429,10 @@ header {
 
 /* MODAIS */
 
-  #details-button {
+#details-button {
     display: none;
     position: absolute;
-    top: 120px;
+    top: 100px;
     right: 30px;
     width: 40px;
     height: 40px;
@@ -459,10 +440,9 @@ header {
     background-color: transparent;
     border: none;
     z-index: 999;
-    background-color:#ff0000;
-  }
+}
   
-  .details-modal {
+.details-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -474,62 +454,68 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
+}
   
-  .details-modal-inner-container {
+.details-modal-inner-container {
     width: 80%;
     max-width: 500px;
     padding: 15px;
-    background-color: #ffffff;
+    background-color: var(--white-color);
     border-radius: 5px;
     z-index: 999;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .details-modal h2 {
+.details-modal img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.details-modal h2 {
     color: var(--black-color);
     font-size: 2rem;
     text-align: left;
-  }
+}
   
-  .details-modal ul {
+.details-modal ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     z-index: 999;
-  }
+}
   
-  .details-modal li {
+.details-modal li {
     margin-bottom: 1rem;
-  }
+}
   
-  .details-modal h4 {
+.details-modal h4 {
     margin: 0;
     font-size: 1.2rem;
     color: #333;
-  }
+}
   
-  .details-modal span {
+.details-modal span {
     display: block;
     font-size: 1rem;
     color: #555;
     margin-top: 0.25rem;
-  }
+}
 
-  .details-modal .trailer {
+.details-modal .trailer {
     margin-top: 2rem;
     text-align: center;
-  }
+}
   
-  .details-modal .trailer h2 {
+.details-modal .trailer h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #111;
-  }
+}
 
-  .hidden {
+.hidden {
     display: none;
-  }
+}
 
 
 @media screen and (max-width: 780px) {
